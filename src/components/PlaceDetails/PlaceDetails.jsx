@@ -6,7 +6,7 @@ import Rating from "@material-ui/lab/Rating";
 
 import useStyles from "./styles";
 
-const PlaceDetails = ({ place }) => {
+const PlaceDetails = ({ place, selected, refProp }) => {
   const classes = useStyles();
 
   return (
@@ -25,7 +25,7 @@ const PlaceDetails = ({ place }) => {
         <Box display="flex" justifyContent="space-between">
           <Rating value={Number(place.rating)} readOnly />
           <Typography gutterBottom variant="subtitle1">
-            out of {place.num_reviews}
+            out of {place.num_reviews} Reviews
           </Typography>
         </Box>
         <Box display="flex" justifyContent="space-between">
